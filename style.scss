@@ -1,0 +1,142 @@
+$color_1: white;
+$font-family_1: 'Roboto', sans-serif;
+$background-color_1: rgba(23, 131, 179, 39%);
+$background-color_2: rgba(255, 255, 255, 50%);
+$background-color_3: white;
+$background-color_4: rgba(17, 117, 162, 53%);
+$background-color_5: red;
+$background-color_6: rgb(41, 212, 41);
+$background-color_7: tomato;
+$background-color_8: rgb(236, 198, 27);
+
+* {
+	box-sizing: border-box;
+}
+html {
+	body {
+		width: 100%;
+		height: 100%;
+		font-family: $font-family_1;
+	}
+}
+body {
+	padding: 0;
+	margin: 0;
+	display: inline-block;
+	background-image: url(img/fondo.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+	box-sizing: content-box;
+	padding-top: 30px;
+	width: 100%;
+}
+h1 {
+	color: $color_1;
+	font-weight: 400;
+	font-size: 25px;
+	background-color: $background-color_1;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	width: fit-content;
+	margin: 0;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 15px;
+	margin-bottom: 20px;
+}
+#kanban {
+	height: 100%;
+	position: relative;
+	text-align: center;
+	.column {
+		display: inline-block;
+		width: 18%;
+		vertical-align: top;
+		background-color: $background-color_2;
+		margin-left: 5px;
+		margin-right: 5px;
+		border-radius: 15px;
+		.card {
+			border-radius: 15px;
+			position: relative;
+			border: solid 1px #0000001c;
+			margin-bottom: 10px;
+			font-size: 15px;
+			background-color: $background-color_3;
+			padding: 3px;
+			display: inline-block;
+			width: 90%;
+			padding: 5px;
+			padding-left: 15px;
+			&:hover {
+				background-color: $background-color_4;
+				cursor: pointer;
+			}
+			h3 {
+				text-align: left;
+				padding-left: 5px;
+			}
+			p {
+				text-align: left;
+				padding-left: 5px;
+			}
+			.tag {
+				text-align: left;
+				padding-left: 3px;
+				padding-right: 32px;
+			}
+		}
+	}
+}
+.tag {
+	float: left;
+	padding: 12px;
+}
+.card {
+	&::after {
+		content: 'X';
+		display: block;
+		width: 16px;
+		height: 16px;
+		line-height: 16px;
+		background-color: $background-color_5;
+		border-radius: 50%;
+		position: absolute;
+		top: 5px;
+		right: 5px;
+		color: $color_1;
+		font-style: bold;
+		font-size: 12px;
+		text-align: center;
+	}
+}
+.fa-desktop {
+	&::before {
+		padding: 8px;
+		background-color: $background-color_6;
+		border-radius: 50%;
+		color: $color_1;
+		position: absolute;
+		bottom: 5px;
+	}
+}
+.fa-cube {
+	padding: 8px;
+	background-color: $background-color_7;
+	border-radius: 50%;
+	color: $color_1;
+	position: absolute;
+	bottom: 5px;
+}
+.fa-mobile-alt {
+	padding: 8px;
+	background-color: $background-color_8;
+	border-radius: 50%;
+	color: $color_1;
+	position: absolute;
+	bottom: 5px;
+}
